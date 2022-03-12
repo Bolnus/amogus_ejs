@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Amogus</title>
+    <%- include("blocks/stylesheet-ref.ejs") -%>
+</head>
+<body bgcolor="#222226">
+<div id="header" class="block">
+    <%- include("blocks/header.ejs") -%>
+<!--    <p id="timer">00:00:000</p>-->
+</div>
+<div id="main-menu" class="block">
+    <%- include("blocks/main-menu.ejs") -%>
+</div>
+<!-- <div id="fullpage"> -->
+<div id="contents" class="block">
+    <div id="records" class="page" class="block">
+        <table class="block" id="recordsTable">
+            <caption id="tableCaption">RECORDS TABLE</caption>
+            <tr>
+                <th>Place</th>
+                <th>Date</th>
+                <th>Score</th>
+            </tr>
+            <% for(var i=0;i<records.length;i++) { %>
+                <tr>
+                    <td><%= i+1 %></td>
+                    <td><%= records[i].date+' '+records[i].time %></td>
+                    <td><%= records[i].result %></td>
+                </tr>
+            <% } %>
+        </table>
+    </div>
+</div>
+<!--<script src=js/records.js></script>-->
+</body>
+</html>

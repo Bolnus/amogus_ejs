@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Amogus</title>
+    <!--    <link rel="stylesheet" href="/public/css/main.css">-->
+    <%- include("blocks/stylesheet-ref.ejs") -%>
+</head>
+<body bgcolor="#222226">
+<div id="header" class="block">
+    <%- include("blocks/header.ejs") -%>
+    <p id="timer">00:00:000</p>
+</div>
+<div id="main-menu" class="block">
+    <%- include("blocks/main-menu.ejs") -%>
+</div>
+<div id="contents" class="block">
+    <div id="startbutton" class="page" class="block">
+        <img id="image" src="pixmaps/start.png" onclick="on_start_clicked()" onmouseover="imageHover(this)" onmouseout="resetImage(this)">
+    </div>
+    <div id="game" class="page" class="block">
+        <div class="buttonLine">
+            <button id="pb0" class="pushButton" onclick="on_pb_clicked(this)">1</button>
+            <button id="pb1" class="pushButton" onclick="on_pb_clicked(this)">2</button>
+            <button id="pb2" class="pushButton" onclick="on_pb_clicked(this)">3</button>
+            <button id="pb3" class="pushButton" onclick="on_pb_clicked(this)">4</button>
+            <button id="pb4" class="pushButton" onclick="on_pb_clicked(this)">5</button>
+        </div>
+        <div class="buttonLine">
+            <button id="pb5" class="pushButton" onclick="on_pb_clicked(this)">6</button>
+            <button id="pb6" class="pushButton" onclick="on_pb_clicked(this)">7</button>
+            <button id="pb7" class="pushButton" onclick="on_pb_clicked(this)">8</button>
+            <button id="pb8" class="pushButton" onclick="on_pb_clicked(this)">9</button>
+            <button id="pb9" class="pushButton" onclick="on_pb_clicked(this)">10</button>
+        </div>
+    </div>
+    <div id="result" class="page" class="block">
+        <div id="result-window" class="block">
+            <div id="hat-window" class="block">
+                <p id="headerName">Result</p>
+                <a href="/" id="closeButton" >✖</a>
+            </div>
+            <div id="body-window" class="block">
+                <p id="window-text">59:59:9999</p>
+            </div>
+        </div>
+    </div>
+</div>
+<script src=/public/js/main.js></script>
+</body>
+</html>

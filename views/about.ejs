@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Amogus</title>
+<!--    <link rel="stylesheet" href="/public/css/main.css">-->
+    <%- include("blocks/stylesheet-ref.ejs") -%>
+</head>
+<body bgcolor="#222226">
+<div id="header" class="block">
+    <%- include("blocks/header.ejs") -%>
+<!--    <p id="timer">00:00:000</p>-->
+</div>
+<div id="main-menu" class="block">
+    <%- include("blocks/main-menu.ejs") -%>
+</div>
+<div id="contents" class="block">
+    <div id="about-page" class="page" class="block">
+        <% for(var i=0;i<abouts.length;i++) { %>
+            <b id="text-header"><%= abouts[i].name %></b>
+            <p id="main-text"><%= abouts[i].text %></p>
+        <% } %>
+    </div>
+</div>
+<!--<script src=js/main.js></script>-->
+</body>
+</html>
